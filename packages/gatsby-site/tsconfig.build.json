@@ -1,0 +1,13 @@
+{
+  "extends": "../core-gatsby-config/src/tsconfig/tsconfig.ts-plugin.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "rootDir": "."
+  },
+  "references": [
+    {
+      "path": "../core-react-ui/tsconfig.build.json"
+    }
+  ],
+  "include": ["src", "test", "types", "scripts"]
+}

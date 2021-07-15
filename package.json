@@ -1,0 +1,55 @@
+{
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=14"
+  },
+  "os": [
+    "!win32"
+  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build": "yarn lerna:build --scope @newrade/core-*",
+    "clean": "yarn lerna:clean --scope @newrade/core-*",
+    "lerna:build": "lerna run build",
+    "lerna:clean": "lerna run clean",
+    "lerna:start": "lerna run start --parallel",
+    "lerna:test": "lerna run test",
+    "lerna:typecheck": "lerna run typecheck --parallel --loglevel error",
+    "lerna:typecheck:build": "lerna run typecheck:build --parallel --loglevel error",
+    "push": "git push --follow-tags",
+    "reset": "rm -rf ./node_modules packages/**/node_modules && yarn",
+    "start": "yarn lerna:start --scope @newrade/core-*",
+    "test": "yarn lerna:test --scope @newrade/core-*",
+    "typecheck": "yarn lerna:typecheck",
+    "typecheck:build": "yarn lerna:typecheck:build"
+  },
+  "resolutions": {},
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "gatsby": "^3.9.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-treat": "^2.0.1",
+    "treat": "^2.0.1",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^14",
+    "@types/react": "^16",
+    "@types/react-dom": "^16",
+    "@vanilla-extract/babel-plugin": "^1.0.0",
+    "@vanilla-extract/css": "^1.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-treat": "^1.6.2",
+    "concurrently": "^6.2.0",
+    "eslint": "^7.30.0",
+    "gatsby-plugin-vanilla-extract": "^1.0.5",
+    "lerna": "^4.0.0",
+    "webpack": "^5"
+  }
+}
