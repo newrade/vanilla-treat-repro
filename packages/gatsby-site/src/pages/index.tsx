@@ -1,5 +1,5 @@
 import {
-  ButtonTreat,
+  // ButtonTreat,
   ButtonVanilla,
   themeClass,
   treatTheme,
@@ -18,11 +18,11 @@ const Page: React.FC<any> = (props) => {
         gap: 80,
       }}
     >
-      <TreatProvider theme={treatTheme}>
-        <ButtonTreat>Button Treat</ButtonTreat>
+      {/* <TreatProvider theme={treatTheme}> */}
+      {/* <ButtonTreat>Button Treat</ButtonTreat> */}
 
-        <ButtonVanilla>Button Vanilla</ButtonVanilla>
-      </TreatProvider>
+      <ButtonVanilla>Button Vanilla</ButtonVanilla>
+      {/* </TreatProvider> */}
     </main>
   );
 };
